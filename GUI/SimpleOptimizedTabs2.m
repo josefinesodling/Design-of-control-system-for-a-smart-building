@@ -54,7 +54,7 @@ handles.output = hObject;
 %% Tabs Code
 % Settings
 TabFontSize = 8;
-TabNames = {'Tab 1','Tab 2','Tab 3'};
+TabNames = {'Floor 4','Floor 3','Tab 3'};
 FigWidth = 1;%0.265;
 
 % Figure resize
@@ -177,7 +177,10 @@ function F4_readbulb_Callback(hObject, eventdata, handles)
 %wn=2;
 %sys = tf(wn^2,[1,2*wn,wn^2]); 
 %sys = wn^2; 
-set(handles.F4_readbulb,'BackgroundColor','green');
+% if (F4_readbulb == 1)      
+% set(handles.F4_readbulb,'BackgroundColor','green');
+% else
+set(handles.F4_readbulb,'BackgroundColor','black');
 F4_bulb = 7; % watt
 set_param('House_model/F4_bulb','Value', num2str(F4_bulb));
 
@@ -340,5 +343,6 @@ function axes4_CreateFcn(hObject, eventdata, handles)
 %BlockTypes = get_param(House_model/F4_bulb,'Scope')
 
 %rto = get_param(gcb,'simout');
+
 
 
