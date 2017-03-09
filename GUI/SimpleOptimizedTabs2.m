@@ -184,7 +184,7 @@ set(handles.F4_readbulb,'BackgroundColor','green');
 F4_bulb = 7; % watt
 set_param('House_model/F4_bulb','Value', num2str(F4_bulb));
 
-plot(ScopeData.time,ScopeData.signals.values)
+%plot(ScopeData.time,ScopeData.signals.values)
 
 
 % f = figure;
