@@ -177,12 +177,22 @@ function F4_readbulb_Callback(hObject, eventdata, handles)
 %wn=2;
 %sys = tf(wn^2,[1,2*wn,wn^2]); 
 %sys = wn^2; 
-% if (F4_readbulb == 1)      
-% set(handles.F4_readbulb,'BackgroundColor','green');
-% else
-set(handles.F4_readbulb,'BackgroundColor','green');
-F4_bulb = 7; % watt
-set_param('House_model/F4_bulb','Value', num2str(F4_bulb));
+
+%button_state = get(hObject,'Value');
+
+%if button_state == get(hObject,'Max')
+%else button_state == get(hObject,'Min')
+%    set(handles.F4_readbulb,'BackgroundColor','red');
+%    F4_bulb = 0; % watt
+%end
+    set(handles.F4_readbulb,'BackgroundColor','green');
+    F4_bulb = 7; % watt
+
+    set_param('House_model/F4_bulb','Value', num2str(F4_bulb));
+
+
+
+
 
 %plot(ScopeData.time,ScopeData.signals.values)
 
@@ -353,3 +363,4 @@ function pushbutton23_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton23 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
