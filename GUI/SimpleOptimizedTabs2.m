@@ -167,8 +167,105 @@ varargout{1} = handles.output;
 %--------------- FROM HERE ADDITIONAL BOTTONS ARE ADDED--------------------
 
 %%%%%%%%%%%%%%%% FLOOR 4 %%%%%%%%%%%%%%%%%%%%%%%%
+%%% BULBS
 % bulb max 7 Watt, energy/day 0.28 kW total 
 % flourecent max 36 Watt
+
+% --- Executes on button press in F4_radiobutton_1.
+function F4_radiobutton_1_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_1
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_1,'BackgroundColor','green');
+    F4_bulb_1 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_1,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_1 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_1','Value', num2str(F4_bulb_1));
+
+% --- Executes on button press in F4_radiobutton_2.
+function F4_radiobutton_2_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_2
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_2,'BackgroundColor','green');
+    F4_bulb_2 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_2,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_2 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_2','Value', num2str(F4_bulb_2));
+
+% --- Executes on button press in F4_radiobutton_3.
+function F4_radiobutton_3_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_3
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_3,'BackgroundColor','green');
+    F4_bulb_3 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_3,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_3 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_3','Value', num2str(F4_bulb_3));
+
+% --- Executes on button press in F4_radiobutton_4.
+function F4_radiobutton_4_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_4
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_4,'BackgroundColor','green');
+    F4_bulb_4 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_4,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_4 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_4','Value', num2str(F4_bulb_4));
+
+% --- Executes on button press in F4_radiobutton_1.
+function F4_radiobutton_5_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_1
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_5,'BackgroundColor','green');
+    F4_bulb_5 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_5,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_5 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_5','Value', num2str(F4_bulb_5));
+
+% --- Executes on button press in F4_radiobutton_6.
+function F4_radiobutton_6_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_6
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_6,'BackgroundColor','green');
+    F4_bulb_6 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_6,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_6 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_6','Value', num2str(F4_bulb_6));
 
 % --- Executes on button press in F4_radiobutton_7.
 function F4_radiobutton_7_Callback(hObject, eventdata, handles)
@@ -186,72 +283,23 @@ elseif button_state == get(hObject,'Min')
 end
 set_param('House_model/Floor_4/Lightening/F4_bulb_7','Value', num2str(F4_bulb_7));
 
-
-% --- Executes on button press in radiobutton2.
-function radiobutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton2 (see GCBO)
+% --- Executes on button press in F4_radiobutton_8.
+function F4_radiobutton_8_Callback(hObject, eventdata, handles)
+% hObject    handle to F4_radiobutton_8 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton2
+% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_8
+button_state = get(hObject,'Value');
+if button_state == get(hObject,'Max')
+    set(handles.F4_radiobutton_8,'BackgroundColor','green');
+    F4_bulb_8 = 7; % watt
+elseif button_state == get(hObject,'Min')
+    set(handles.F4_radiobutton_8,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_8 = 0; % watt
+end
+set_param('House_model/Floor_4/Lightening/F4_bulb_8','Value', num2str(F4_bulb_8));
 
-
-% --- Executes on button press in radiobutton3.
-function radiobutton3_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton3 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton3
-
-
-% --- Executes on button press in radiobutton4.
-function radiobutton4_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton4 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton4
-
-
-% --- Executes on button press in F4_radiobutton5.
-function F4_radiobutton5_Callback(hObject, eventdata, handles)
-% hObject    handle to F4_radiobutton5 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of F4_radiobutton5
-
-
-% --- Executes on button press in radiobutton6.
-function radiobutton6_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton6 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton6
-
-
-% --- Executes on button press in radiobutton7.
-function radiobutton7_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton7 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton7
-
-
-% --- Executes on button press in radiobutton8.
-function radiobutton8_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton8 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton8
-
-
-% --- Executes on button press in radiobutton9.
-function radiobutton9_Callback(hObject, eventdata, handles)
-% hObject    handle to radiobutton9 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% Hint: get(hObject,'Value') returns toggle state of radiobutton9
-
-
-
+%%% FLOURECENTS
 % --- Executes on button press in F4_togglebutton_1.
 function F4_togglebutton_1_Callback(hObject, eventdata, handles)
 % hObject    handle to F4_togglebutton_1 (see GCBO)
@@ -341,7 +389,7 @@ function F4_togglebutton_5_Callback(hObject, eventdata, handles)
 button_state = get(hObject,'Value');
 if button_state == get(hObject,'Max')
     set(handles.F4_togglebutton_5,'BackgroundColor','green');
-    F4_flourecent_5 = 7; % watt
+    F4_flourecent_5 = 36; % watt
 elseif button_state == get(hObject,'Min')
     set(handles.F4_togglebutton_5,'BackgroundColor',[0.94 0.94 0.94]);
     F4_flourecent_5 = 0; % watt
@@ -368,17 +416,21 @@ function F4_togglebutton_7_Callback(hObject, eventdata, handles)
 % hObject    handle to F4_togglebutton_7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-button_state = get(hObject,'Value');
-if button_state == get(hObject,'Max')
-    set(handles.F4_togglebutton_7,'BackgroundColor','green');
-    F4_flourecent_7 = 36; % watt
-elseif button_state == get(hObject,'Min')
-    set(handles.F4_togglebutton_7,'BackgroundColor',[0.94 0.94 0.94]);
-    F4_flourecent_7 = 0; % watt
-end
-set_param('House_model/Floor_4/Lightening/F4_flourecent_7','Value', num2str(F4_flourecent_7));
+F4_togglebutton_1_Callback(hObject, eventdata, handles);
+F4_togglebutton_2_Callback(hObject, eventdata, handles);
+F4_togglebutton_3_Callback(hObject, eventdata, handles);
+F4_togglebutton_4_Callback(hObject, eventdata, handles);
+F4_togglebutton_5_Callback(hObject, eventdata, handles);
+F4_togglebutton_6_Callback(hObject, eventdata, handles);
 
-
+F4_radiobutton_1_Callback(hObject, eventdata, handles);
+F4_radiobutton_2_Callback(hObject, eventdata, handles);
+F4_radiobutton_3_Callback(hObject, eventdata, handles);
+F4_radiobutton_4_Callback(hObject, eventdata, handles);
+F4_radiobutton_5_Callback(hObject, eventdata, handles);
+F4_radiobutton_6_Callback(hObject, eventdata, handles);
+F4_radiobutton_7_Callback(hObject, eventdata, handles);
+F4_radiobutton_8_Callback(hObject, eventdata, handles);
 
 %-----------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -390,20 +442,12 @@ function axes4_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to axes4 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
-
 % Hint: place code in OpeningFcn to populate axes4
-
 %rto = get_param(gcb,'RuntimeObject');
 %blk = 'House_model/F4_bulb';
 %event = 'PostOutputs';
 %listener = 
 %h = add_exec_event_listener(blk,event,listener)
 %BlockTypes = get_param(BlockPaths,'BlockType')
-
 %BlockTypes = get_param(House_model/F4_bulb,'Scope')
-
 %rto = get_param(gcb,'simout');
-
-
-
-
