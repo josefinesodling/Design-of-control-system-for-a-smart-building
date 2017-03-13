@@ -171,20 +171,20 @@ varargout{1} = handles.output;
 % flourecent max 36 Watt
 
 % --- Executes on button press in F4_radiobutton_7.
-function F4_radiobutton_1_Callback(hObject, eventdata, handles)
+function F4_radiobutton_7_Callback(hObject, eventdata, handles)
 % hObject    handle to F4_radiobutton_7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % Hint: get(hObject,'Value') returns toggle state of F4_radiobutton_7
 button_state = get(hObject,'Value');
 if button_state == get(hObject,'Max')
-    set(handles.F4_radiobutton_1,'BackgroundColor','green');
-    F4_bulb_1 = 36; % watt
+    set(handles.F4_radiobutton_7,'BackgroundColor','green');
+    F4_bulb_7 = 7; % watt
 elseif button_state == get(hObject,'Min')
-    set(handles.F4_radiobutton_1,'BackgroundColor',[0.94 0.94 0.94]);
-    F4_bulb_1 = 0; % watt
+    set(handles.F4_radiobutton_7,'BackgroundColor',[0.94 0.94 0.94]);
+    F4_bulb_7 = 0; % watt
 end
-set_param('House_model/Floor_4/Lightening/F4_bub_1','Value', num2str(F4_bulb_1));
+set_param('House_model/Floor_4/Lightening/F4_bulb_7','Value', num2str(F4_bulb_7));
 
 
 % --- Executes on button press in radiobutton2.
